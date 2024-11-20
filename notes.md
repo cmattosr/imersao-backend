@@ -9,3 +9,13 @@ npm install express
 # executar o server
 
 node server.js
+node --watch server.js  (reinicia o servidor automaticamente em caso de alterações)
+
+# datanase
+
+Mongo Atlas
+https://cloud.mongodb.com/v2/673c7f2eb5151d3e93e2538c#/overview
+cluster name: Cluster0
+
+conection: 
+    mongodb+srv://<user>:<db_password>@cluster0.tbszu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
