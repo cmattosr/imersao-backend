@@ -11,6 +11,10 @@ npm install express
 node server.js
 node --watch server.js  (reinicia o servidor automaticamente em caso de alterações)
 
+## Depois de configurar o sript
+
+npm run dev
+
 # datanase
 
 Mongo Atlas
@@ -19,3 +23,6 @@ cluster name: Cluster0
 
 conection: 
     mongodb+srv://<user>:<db_password>@cluster0.tbszu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+Install Mongi driver: npm install mongodb
+
