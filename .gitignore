@@ -2,3 +2,4 @@ node_modules
 gemini-api-key.txt
 database_credentials.txt
 .env
+gcp.txt
