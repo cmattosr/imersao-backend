@@ -28,6 +28,7 @@
     "test": ""
   },
   "dependencies": {
+    "@google-cloud/storage": "^7.14.0",
     "@google/generative-ai": "^0.21.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
