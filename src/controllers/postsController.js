@@ -31,6 +31,8 @@ export async function uploadImagem(req, res) {
         const postCriado = await criarPost(novoPost);
         const imagemAtualizada = `uploads/${postCriado.insertedId}.png`
         fs.renameSync(req.file.path, imagemAtualizada);
+        console.log(req.file.path);
+        console.log(imagemAtualizada);
         res.status(201).json(postCriado);
     }
     catch (error) {
@@ -46,6 +48,7 @@ export async function atualizarNovoPost(req, res) {
     try {
         const imgBuffer = fs.readFileSync(`uploads/${id}.png`);
         const descricao = await gerarDescricaoComGemini(imgBuffer);
+        console.log(urlImagem)
         const post = {
             imgUrl: urlImagem,
             descricao: descricao,
