@@ -29,7 +29,7 @@ export async function uploadImagem(req, res) {
     };
     try {
         const postCriado = await criarPost(novoPost);
-        const imagemAtualizada = `https://imersao-backend-40446822135.southamerica-east1.run.app/uploads/${postCriado.insertedId}.png`
+        const imagemAtualizada = `uploads/${postCriado.insertedId}.png`
         fs.renameSync(req.file.path, imagemAtualizada);
         res.status(201).json(postCriado);
     }
@@ -42,6 +42,7 @@ export async function uploadImagem(req, res) {
 export async function atualizarNovoPost(req, res) {
     const id = req.params.id;
     const urlImagem = `https://imersao-backend-40446822135.southamerica-east1.run.app/${id}.png`
+    console.log(urlImagemt);
     try {
         const imgBuffer = fs.readFileSync(`uploads/${id}.png`);
         const descricao = await gerarDescricaoComGemini(imgBuffer);
