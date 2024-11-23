@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
     }
   });
 
-const upload = multer({ dest: "./uploads" , storage});
+const upload = multer({ storage: storage });
 
 const routes = (app) => {
     // Habilita o middleware `express.json()` para que o Express possa entender requisições com corpo no formato JSON.
