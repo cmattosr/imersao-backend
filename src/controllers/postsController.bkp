@@ -29,7 +29,7 @@ export async function uploadImagem(req, res) {
     };
     try {
         const postCriado = await criarPost(novoPost);
-        const imagemAtualizada = `https://imersao-backend-40446822135.southamerica-east1.run.app/uploads/${postCriado.insertedId}.png`
+        const imagemAtualizada = `uploads/${postCriado.insertedId}.png`
         fs.renameSync(req.file.path, imagemAtualizada);
         res.status(201).json(postCriado);
     }
